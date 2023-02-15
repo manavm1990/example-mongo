@@ -15,4 +15,9 @@ router.post("/createMany", async (req, res) => {
   res.json(createdBooks);
 });
 
+router.get("/readAll", async (_, res) => {
+  const books = await bookController.readAll();
+  res.json(books);
+});
+
 export default router;

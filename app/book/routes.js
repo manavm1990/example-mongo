@@ -20,4 +20,9 @@ router.get("/readAll", async (_, res) => {
   res.json(books);
 });
 
+router.delete("/destroyOne/:id", async (req, res) => {
+  const deletedBook = await bookController.destroyOne(req.params.id);
+  res.json(deletedBook);
+});
+
 export default router;

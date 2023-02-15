@@ -8,4 +8,11 @@ router.post("/create", async (req, res) => {
   res.json(createdBook);
 });
 
+router.post("/createMany", async (req, res) => {
+  const { books } = req.body;
+
+  const createdBooks = await bookController.createMany(books);
+  res.json(createdBooks);
+});
+
 export default router;

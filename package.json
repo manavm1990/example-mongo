@@ -2,10 +2,6 @@
   "private": true,
   "main": "app/index.js",
   "type": "module",
-  "scripts": {
-    "dep-graph": "depcruise --exclude \"^node_modules\" --output-type dot src | dot -T svg > dependency-graph.svg",
-    "test": "vitest"
-  },
   "devDependencies": {
     "@babel/eslint-parser": "^7.19.1",
     "@babel/plugin-syntax-import-assertions": "^7.20.0",
@@ -17,8 +13,7 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-n": "^15.6.1",
     "eslint-plugin-promise": "^6.1.1",
-    "prettier": "^2.7.1",
-    "vitest": "^0.28.1"
+    "prettier": "^2.7.1"
   },
   "dependencies": {
     "express": "^4.18.2",
